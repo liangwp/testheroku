@@ -16,7 +16,7 @@
     "url": "https://github.com/liangwp/testheroku/issues"
   },
   "homepage": "https://github.com/liangwp/testheroku#readme",
-  "devDependencies": {
+  "dependencies": {
     "express": "^4.14.0"
   }
 }
