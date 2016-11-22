@@ -4,6 +4,8 @@ var http = require('http');
 var server = http.createServer(function(request, response) {
     // process HTTP request. Since we're writing just WebSockets server
     // we don't have to implement anything.
+    console.log("does this respond to http request or do i have to detect it?");
+    response.end("For testing websockets. Not serving HTTP requests.");
 });
 var port = (process.env.PORT || 1337);
 server.listen(port, function() {
