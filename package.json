@@ -1,22 +1,20 @@
 {
-  "name": "testheroku",
+  "name": "node",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "chat-server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/liangwp/testheroku.git"
+    "server": "node chat-server.js",
+    "client-1": "/Users/mconline/Desktop/tests/AIRSDK_Compiler/bin/adl ../MyTestApp/bin-debug/MyTestApp-app.xml",
+    "client-2": "/Users/mconline/Desktop/tests/AIRSDK_Compiler/bin/adl ../TestApp/bin-debug/TestApp-app.xml",
+	"server-lwp": "node lwp-server.js",
+    "build-lwp-debug": "/Users/mconline/Desktop/tests/flex_sdk_4.6/bin/amxmlc_64 ../TestApp_lwp/TestApp_lwp.mxml -static-link-runtime-shared-libraries=true -default-size 800 600 -default-frame-rate 24 -source-path /Users/mconline/Desktop/tests/websocket-lwp/AS3WebSocket/src -library-path+=/Users/mconline/Desktop/tests/websocket-lwp/AS3WebSocket/lib -strict=true -debug=true",
+    "client-lwp-1": "/Users/mconline/Desktop/tests/AIRSDK_Compiler/bin/adl ../TestApp_lwp/TestApp_lwp-app.xml",
+    "client-lwp-2": "/Users/mconline/Desktop/tests/AIRSDK_Compiler/bin/adl ../TestApp_lwp/TestApp_lwp-app2.xml"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/liangwp/testheroku/issues"
-  },
-  "homepage": "https://github.com/liangwp/testheroku#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "websocket": "^1.0.23"
   }
 }
