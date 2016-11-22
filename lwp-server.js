@@ -5,6 +5,7 @@ var server = http.createServer(function(request, response) {
     // process HTTP request. Since we're writing just WebSockets server
     // we don't have to implement anything.
     console.log("Incoming HTTP request from: " + request.ip);
+    console.log(request);
     response.end("For testing websockets. Not serving HTTP requests.");
 });
 var port = (process.env.PORT || 1337);
