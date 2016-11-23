@@ -46,7 +46,7 @@ wsServer.on('request', function(request) {
     connection.on('message', function(message) {
         if (message.type === 'utf8') {
             // process WebSocket message
-            var broadcast_msg = "received from " + this_client_ip + " : " + message.utf8Data;
+            var broadcast_msg = "received from " + this_client_ip + " --> " + message.utf8Data;
             console.log(broadcast_msg);
 
             // broadcast the message to all clients.

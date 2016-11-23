@@ -10,7 +10,9 @@
 	"server-lwp": "node lwp-server.js",
     "build-lwp-debug": "/Users/mconline/Desktop/tests/flex_sdk_4.6/bin/amxmlc_64 ../TestApp_lwp/TestApp_lwp.mxml -static-link-runtime-shared-libraries=true -default-size 800 600 -default-frame-rate 24 -source-path /Users/mconline/Desktop/tests/websocket-lwp/AS3WebSocket/src -library-path+=/Users/mconline/Desktop/tests/websocket-lwp/AS3WebSocket/lib -strict=true -debug=true",
     "client-lwp-1": "/Users/mconline/Desktop/tests/AIRSDK_Compiler/bin/adl ../TestApp_lwp/TestApp_lwp-app.xml",
-    "client-lwp-2": "/Users/mconline/Desktop/tests/AIRSDK_Compiler/bin/adl ../TestApp_lwp/TestApp_lwp-app2.xml"
+    "client-lwp-2": "/Users/mconline/Desktop/tests/AIRSDK_Compiler/bin/adl ../TestApp_lwp/TestApp_lwp-app2.xml",
+	"build-swf-debug": "/Users/mconline/Desktop/tests/flex_sdk_4.6/bin/amxmlc_64 ../TestApp_lwp/TestAppAS3.as -static-link-runtime-shared-libraries=true -default-size 800 600 -default-frame-rate 24 -source-path /Users/mconline/Desktop/tests/websocket-lwp/AS3WebSocket/src -library-path+=/Users/mconline/Desktop/tests/websocket-lwp/AS3WebSocket/lib -strict=true -debug=true",
+	"run-swf-debug": "/Users/mconline/Desktop/tests/AIRSDK_Compiler/bin/adl ../TestApp_lwp/TestAppAS3-app.xml"
   },
   "author": "",
   "license": "ISC",
