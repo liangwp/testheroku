@@ -1,11 +1,19 @@
 var WebSocketServer = require('websocket').server;
 var http = require('http');
 
+var client_counter = 0; // MDN: The MAX_SAFE_INTEGER constant has a value of 9,007,199,254,740,991.
+var client_connections = {};
+
 var server = http.createServer(function(request, response) {
-    // process HTTP request. Since we're writing just WebSockets server
-    // we don't have to implement anything.
-    console.log("Incoming HTTP request from: " + request.headers['x-forwarded-for']); // omg... no documentation...
-    response.end("For testing websockets. Not serving HTTP requests.");
+
+  // demonstration of server pushing messages
+  for (var client_id in client_connections) {
+    client_connections[client_id].sendUTF("Server --> Hello all WebSocket clients, FYI someone has requested the HTML landing page on the server! \"https://lwp-testwebsockets.herokuapp.com/\"");
+  }
+
+  // process HTTP request. Since we're writing just WebSockets server we don't have to implement anything.
+  console.log("Incoming HTTP request from: " + request.headers['x-forwarded-for']); // omg... no documentation...
+  response.end("For testing websockets. Not serving HTTP requests.");
 });
 var port = (process.env.PORT || 1337);
 server.listen(port, function() {
@@ -16,9 +24,6 @@ server.listen(port, function() {
 wsServer = new WebSocketServer({
     httpServer: server
 });
-
-var client_counter = 0; // MDN: The MAX_SAFE_INTEGER constant has a value of 9,007,199,254,740,991.
-var client_connections = {};
 
 // WebSocket server
 wsServer.on('request', function(request) {
